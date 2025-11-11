@@ -1,9 +1,22 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, Users, Briefcase, TrendingUp } from 'lucide-react';
+import { Search, Users, Briefcase, TrendingUp, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
+const testimonials = [
+  { name: 'Sarah Johnson', role: 'Software Engineer', company: 'Tech Corp', review: 'Found my dream job in just 2 weeks! The platform is incredibly easy to use and the job matches were spot on.', image: 'https://i.pravatar.cc/150?img=1' },
+  { name: 'Michael Chen', role: 'Product Manager', company: 'StartupXYZ', review: 'The application process was seamless. I got multiple interview calls within days of signing up!', image: 'https://i.pravatar.cc/150?img=13' },
+  { name: 'Emily Rodriguez', role: 'UX Designer', company: 'Design Studio', review: 'Best job portal I\'ve used. The interface is clean and the job recommendations are highly relevant.', image: 'https://i.pravatar.cc/150?img=5' },
+  { name: 'David Kim', role: 'Data Scientist', company: 'Analytics Inc', review: 'Landed a senior position with 40% salary increase. Thank you Job Match for changing my career!', image: 'https://i.pravatar.cc/150?img=14' },
+  { name: 'Jessica Williams', role: 'Marketing Manager', company: 'Brand Co', review: 'The employer responses were quick and professional. Got hired within a month of applying!', image: 'https://i.pravatar.cc/150?img=9' },
+  { name: 'Ryan Patel', role: 'Full Stack Developer', company: 'WebTech', review: 'Amazing platform! The job alerts kept me updated with opportunities that matched my skills perfectly.', image: 'https://i.pravatar.cc/150?img=12' },
+  { name: 'Amanda Foster', role: 'HR Director', company: 'Global Solutions', review: 'As an employer, finding quality candidates has never been easier. Highly recommend!', image: 'https://i.pravatar.cc/150?img=10' },
+  { name: 'James Anderson', role: 'DevOps Engineer', company: 'Cloud Systems', review: 'The detailed job descriptions and company profiles helped me make informed decisions. Love it!', image: 'https://i.pravatar.cc/150?img=15' },
+  { name: 'Lisa Thompson', role: 'Business Analyst', company: 'Finance Group', review: 'Got my first remote job through this platform. The search filters are incredibly helpful!', image: 'https://i.pravatar.cc/150?img=20' },
+  { name: 'Chris Martinez', role: 'Sales Executive', company: 'Enterprise Ltd', review: 'Within 3 weeks, I had 5 job offers to choose from. This platform truly delivers results!', image: 'https://i.pravatar.cc/150?img=33' }
+];
 
 const Landing = () => {
   const { isAuthenticated } = useAuth();
@@ -66,7 +79,7 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose JobPortal?
+              Why Choose Job Match?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We make job searching and hiring simple, efficient, and effective for everyone.
@@ -209,6 +222,50 @@ const Landing = () => {
               >95%</motion.div>
               <div className="text-gray-600">Success Rate</div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Success Stories
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Hear from professionals who found their dream jobs through our platform
+            </p>
+          </div>
+        </div>
+        
+        <div className="relative">
+          <div className="flex animate-scroll">
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-96 mx-4 bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+              >
+                <div className="flex items-center mb-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover mr-4"
+                  />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <p className="text-sm text-blue-600">{testimonial.company}</p>
+                  </div>
+                </div>
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-700 leading-relaxed">{testimonial.review}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

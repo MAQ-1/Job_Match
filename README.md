@@ -1,6 +1,6 @@
-# Job Portal Application
+# Job Match Application
 
-A full-stack job portal application built with React, Node.js, Express, and MongoDB.
+A full-stack job matching application built with React, Node.js, Express, and MongoDB.
 
 ## ✅ Implemented Features
 
@@ -70,7 +70,7 @@ A full-stack job portal application built with React, Node.js, Express, and Mong
 1. Clone the repository
 ```bash
 git clone <repository-url>
-cd job-portal
+cd job-match
 ```
 
 2. Install all dependencies
@@ -136,7 +136,7 @@ The application will be available at:
 ## Project Structure
 
 ```
-job-portal/
+job-match/
 ├── backend/
 │   ├── models/          # Database models
 │   ├── routes/          # API routes

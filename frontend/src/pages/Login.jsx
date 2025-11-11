@@ -67,7 +67,7 @@ const Login = () => {
         className="sm:mx-auto sm:w-full sm:max-w-md relative z-10"
       >
         <Link to="/" className="flex justify-center text-3xl font-bold text-blue-600">
-          JobPortal
+          Job Match
         </Link>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Sign in to your account

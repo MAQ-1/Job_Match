@@ -19,8 +19,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
-            <img src={logo} alt="JobPortal Logo" className="w-12 h-12 object-contain" />
-            <span>JobPortal</span>
+            <img src={logo} alt="Job Match Logo" className="w-12 h-12 object-contain" />
+            <span>Job Match</span>
           </Link>
 
           <nav className="flex items-center space-x-6">
