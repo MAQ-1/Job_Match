@@ -98,7 +98,7 @@ npm run dev
 
 The application will be available at:
 - Frontend: (https://job-match-mu.vercel.app/)
-- Backend API: http://localhost:5001
+- Backend API:(https://job-match-1.onrender.com)
 
 ## API Endpoints
 
