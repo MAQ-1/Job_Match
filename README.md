@@ -97,7 +97,7 @@ npm run dev
 ```
 
 The application will be available at:
-- Frontend:https://job-match-2wlz.vercel.app/
+- Frontend:https://job-match-pi.vercel.app/
 - Backend API:(https://job-match-1.onrender.com)
 
 ## API Endpoints
