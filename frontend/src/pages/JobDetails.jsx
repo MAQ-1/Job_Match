@@ -140,7 +140,7 @@ const JobDetails = () => {
               <div className="flex items-center space-x-4">
                 {job.company?.companyLogo && (
                   <img 
-                    src={`http://localhost:5001/${job.company.companyLogo}`} 
+                    src={`${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5001'}/${job.company.companyLogo}`} 
                     alt={job.company.companyName || job.company.name}
                     className="w-16 h-16 rounded-lg object-cover"
                   />
