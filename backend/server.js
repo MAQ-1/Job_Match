@@ -15,6 +15,7 @@ const app = express();
 
 app.use(cors({
   origin: ['https://job-match-pi.vercel.app', 'https://job-match-2wlz.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
 app.use(express.json());
