@@ -97,7 +97,7 @@ npm run dev
 ```
 
 The application will be available at:
-- Frontend: http://localhost:5173
+- Frontend: (https://job-match-mu.vercel.app/)
 - Backend API: http://localhost:5001
 
 ## API Endpoints
